@@ -1,5 +1,4 @@
-import { Dialog } from '@headlessui/react';
-import React from 'react';
+import React from "react";
 
 interface CheckboxProps {
   id?: string;
@@ -10,8 +9,8 @@ interface CheckboxProps {
   label?: string;
   description?: string;
   className?: string;
-  'aria-label'?: string;
-  'aria-describedby'?: string;
+  "aria-label"?: string;
+  "aria-describedby"?: string;
 }
 
 export default function Checkbox({
@@ -19,12 +18,11 @@ export default function Checkbox({
   name,
   checked = false,
   onChange,
-  disabled = false,
   label,
   description,
   className = "",
-  'aria-label': ariaLabel,
-  'aria-describedby': ariaDescribedBy
+  "aria-label": ariaLabel,
+  "aria-describedby": ariaDescribedBy,
 }: CheckboxProps) {
   const checkboxId = id || name;
 
@@ -52,7 +50,7 @@ export default function Checkbox({
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
-            className={checked ? 'opacity-100' : 'opacity-0'}
+            className={checked ? "opacity-100" : "opacity-0"}
           />
         </svg>
       </div>
@@ -70,8 +68,9 @@ export default function Checkbox({
             type="checkbox"
             checked={checked}
             onChange={onChange}
-            
-            aria-describedby={description ? `${checkboxId}-description` : ariaDescribedBy}
+            aria-describedby={
+              description ? `${checkboxId}-description` : ariaDescribedBy
+            }
             className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-400 forced-colors:appearance-auto"
           />
           {/* <svg
@@ -95,7 +94,7 @@ export default function Checkbox({
         </label>
         {description && (
           <>
-            {' '}
+            {" "}
             <span id={`${checkboxId}-description`} className="text-gray-500">
               {description}
             </span>

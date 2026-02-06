@@ -8,7 +8,6 @@ import { useTodos } from "../hooks/useTodos";
 import { toast } from "sonner";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
-import CardSkeletonGrid from "./CardSkeletonGrid";
 
 const Card: React.FC = () => {
   const { todos, refresh } = useTodos();
